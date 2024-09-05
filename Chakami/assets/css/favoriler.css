@@ -1,0 +1,308 @@
+body {
+    background-color: #eef5ee;
+}
+    /* Navbar */
+    .navbar {
+        padding: 10px;
+        background-color: #f8f9fa; /* Arkaplan rengi */
+        display: flex; /* Navbarı yatay hizala */
+        align-items: center; /* Öğeleri dikey olarak hizala */
+    }
+
+    .profile-popup {
+        position: relative;
+        display: inline-block;
+    }
+
+    .profile-popup-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 120px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        padding: 10px;
+        z-index: 1;
+        right: 0;
+        top: 40px;
+    }
+
+    .profile-popup-content a {
+        display: block;
+        padding: 8px 12px;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .profile-popup-content a:hover {
+        background-color: transpa;
+    }
+
+    .profile-popup:hover .profile-popup-content {
+        display: block;
+    }
+
+    .profile-popup:hover .profile-popup-content,
+    .profile-popup-content:hover {
+        display: block;
+    }
+
+    .logo {
+        flex: 1;
+        /* Logo öğesini genişlet */
+        max-width: max-content;
+    }
+
+    .logo img {
+        margin-left: 3%;
+        max-width: 25%;
+        /* Logo genişliğini sabit tut */
+        display: inline-block;
+        /* Logo görüntüsünü inline-block olarak ayarla */
+    }
+
+    .search-bar {
+        right: 25%;
+        flex: 1;
+        /* Arama çubuğunu genişlet */
+        max-width: 450px;
+        /* Maksimum genişlik belirle */
+        margin-left: 50px;
+        
+        position: relative;
+    }
+
+    .search-icon {
+        position: absolute;
+        right: 10px;
+        /* Sağ kenara hizala */
+        top: 50%;
+        /* Dikey hizalamayı ayarla */
+        transform: translateY(-50%);
+        /* Dikey hizalamayı düzelt */
+        width: 20px;
+        /* Simge genişliği */
+        height: auto;
+        /* Otomatik yükseklik */
+    }
+
+    
+    .form-control {
+        width: 100%;
+        padding: 8px;
+        padding-right: 40px;
+        box-sizing: border-box;
+    }
+
+    #result {
+position: absolute;
+top: 75%;
+left: 50%; /* Sol kenarını sayfanın ortasına hizala */
+transform: translateX(-50%); /* Ortalamak için sola kaydır */
+width: 100%;
+max-width: 450px;
+background-color: white;
+max-height: 250px;
+overflow-y: auto; /* Yüksekliği aşan içerikler için dikey scrollbar*/
+z-index: 1000;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+#result table {
+width: 100%;
+border-collapse: collapse; /* Kenarlıkların çakışmasını önle */
+}
+
+#result td {
+padding: 8px;
+border-bottom: 1px solid #ccc;
+cursor: pointer;
+}
+
+#result td:hover {
+background-color: #f0f0f0;
+}
+
+.search-product-link {
+text-decoration: none; 
+color: black;
+}
+
+.search-product-link:hover {
+text-decoration: none;
+color: black;
+}
+
+.search-product-item {
+display: flex;
+align-items: center;
+padding: 10px;
+border-bottom: 1px solid #ddd;
+cursor: pointer;
+text-decoration: none;
+color: black;
+}
+
+.search-product-item:hover {
+background-color: #f0f0f0;
+}
+
+.search-product-image {
+width: 60px; /* Resim genişliği */
+height: auto; /* Resim yüksekliği otomatik ayar */
+margin-right: 10px; /* Resim ve metin arasında boşluk */
+}
+
+.search-product-name {
+font-size: 16px; /* Yazı tipi boyutu */
+color: black; /* Yazı rengi */
+flex-grow: 1;
+margin-left: 25px;
+text-decoration: none;
+}
+
+    .user-actions img {
+        width: 25px; /* Görsel boyutunu ayarla */
+        margin: 0 5px; /* Görsel aralığını ayarla */
+        margin-right: 15px;
+    }
+
+    .categories {
+        display: flex;
+        justify-content: center; /* Kategorileri merkeze al */
+        margin-top: 3%;
+        padding: 10px;
+    }
+
+    .categories a {
+        color: black; /* Kategori metin rengini siyah yap */
+        margin: 0 15px; /* Kategori aralığını ayarla */
+        text-decoration: none; /* Link altındaki çizgiyi kaldır */
+    }
+
+     .categories a:hover {
+         color: #5b8258; /* Üzerine gelince rengi değiştir */
+         text-decoration: none;
+         font-size: 17px;
+    }
+
+
+    .custom-container {
+        max-width: 60%;
+        margin: 50px auto;
+        padding: 20px;
+        margin-top: 5%;
+        margin-bottom: 13%;
+    }
+
+    .col-12 {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+        align-items: center;
+        margin-left: 2%;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+   }
+
+    .custom-container h2 {
+        margin-left: 2%;
+        margin-bottom: 6%;
+    }
+
+    .product-card {
+        margin-top: 11%;
+    }
+    
+    .product-card img {
+        width: 80%;
+        /* Resimlerin genişliğini kartın genişliğine uyacak şekilde ayarla */
+        height: auto;
+        margin-bottom: 4%;
+        margin-left: 10%;
+    }
+
+    .product-brand , .price {
+        text-align: center;
+    }
+
+    .product-brand a {
+        margin-top: 2%;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+
+    .product-brand a:hover {
+        color: #734E39;
+    }
+    
+
+.button-container {
+display: flex;
+align-items: center;
+justify-content: center;
+margin-left: 7%;
+margin-top: 2%;
+}
+
+.sepet-button {
+        padding: 0;
+        width: 45px;
+        height: 45px;
+        border-radius: 10%;
+        cursor: pointer;
+        background-color: transparent;
+        border: #5b8258;
+    }
+    
+    .sepet-button img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .sepet-button img:hover {
+        filter: brightness(0.9);
+        /* Resmin parlaklığını düşür */
+        background-color: lightgray;
+        border-radius: 10%;
+    } 
+
+    .favorite-icon {
+        padding: 0;
+        width: 60px;
+        border-radius: 10%;
+        cursor: pointer;
+        background-color: transparent;
+        border: #5b8258;
+    }
+
+    .favorite-icon .remove {
+        transition: background-color 0.5s;
+        border: none;
+        background-color: transparent;
+    }
+
+    .favorite-icon img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .favorite-icon img:hover {
+        filter: brightness(0.9);
+        /* Resmin parlaklığını düşür */
+        background-color: lightgray;
+        border-radius: 10%;
+    }  
+   
+   .message {
+       font-size: 24px;
+       color: #333;
+       margin-bottom: 20px;
+   }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        background-color: #f8f9fa; /* Arkaplan rengi */
+        padding: 20px;
+        margin-top: 20%;
+    }
